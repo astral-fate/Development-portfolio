@@ -143,17 +143,13 @@ body {
     margin-bottom: 20px;      /* Adds some space below the tabs */
 }
 
-/* Category Tabs */
-.category-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
+
+/* Category Tabs */
+/* Category Tabs */
 .category-tab {
     padding: 10px 20px;
-    border: 1px solid #ccc; /* ADDED BORDER */
+    border: 1px solid #ccc;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
