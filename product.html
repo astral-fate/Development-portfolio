@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Product Projects | مشاريع المنتج</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Link to external CSS (optional) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="header">
-        <h1>Product Projects | مشاريع المنتج</h1>
+        <h1>Digital Products Projects | مشاريع المنتجات الرقمية</h1>
     </div>
 
     <nav class="nav">
@@ -15,52 +15,80 @@
     </nav>
 
     <div class="projects-container">
-         <!-- Product Project 1 -->
-         <div class="project-card">
+        <!-- PenceAI -->
+        <div class="project-card">
             <div class="project-header">
-               <div class="project-image">
-                  <img src="img/book.png" alt="Project 1 Image">
-               </div>
-               <div class="project-info">
-                  <h2 class="project-title">Young Humanitarian Handbook | كتيب دليل الشباب الإنسانيين</h2>
-                  <p>Translation of a handbook designed for young people interested in humanitarian work, covering key concepts and practical skills.</p>
-               </div>
+                <div class="project-image">
+                    <!-- Replace with an appropriate image -->
+                    <img src="img/penceai_icon.png" alt="PenceAI Image">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">PenceAI</h2>
+                    <p>AI-advisor to help achieving goals of sustainable financial management. The main goal of the PenceAI project is to develop an AI-powered personal finance advisor to help users manage their finances, provide budgeting advice, and suggest investments.</p>
+                </div>
             </div>
 
             <div class="translation-tabs">
-               <button class="tab active" onclick="window.open('https://drive.google.com/file/d/YOUR_ORIGINAL_FILE_ID_1/view?usp=sharing', '_blank'); showContent('original1')">Original | النص الأصلي</button>
-               <button class="tab" onclick="window.open('https://drive.google.com/file/d/YOUR_TRANSLATION_FILE_ID_1/view?usp=sharing', '_blank'); showContent('translation1')">Translation | الترجمة</button>
-               <button class="tab" onclick="window.open('https://docs.google.com/document/d/1YSb-CkJrS8nGPD0redrLg1ZIjdRSQuIH/view?usp=sharing', '_blank'); showContent('bilingual1')">Bilingual | ثنائي اللغة</button>
-
+                <button class="tab" onclick="window.open('https://github.com/astral-fate/PenceAI', '_blank')">Development (GitHub)</button>
+                <button class="tab" onclick="window.open('https://observant-beaufort-ffd.notion.site/PenceAI-f3e584524ff341e28f7a9778fb1c1d91', '_blank')">Product Documentation</button>
             </div>
-            <div class="translation-content">
-               <div id="original1" class="content-section active">
-               </div>
+        </div>
 
-               <div id="translation1" class="content-section">
-               </div>
-
-               <div id="bilingual1" class="content-section">
-               </div>
+        <!-- Kidney Guard: CKD classfication -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-image">
+                    <!-- Replace with an appropriate image -->
+                    <img src="img/kidneyguard_icon.png" alt="Kidney Guard Image">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Kidney Guard: CKD classification</h2>
+                    <p>Kidney Guard is an alternative remote self-monitoring solution that provides in-real time prediction of kidney health, with suggested nutrition recommendation. The app can be used with blood-sample taken from kidney meter device, or along side blood-sample taken from a hospital.</p>
+                </div>
             </div>
-         </div>
 
-        <!-- Other Product Projects... -->
+            <div class="translation-tabs">
+                <button class="tab" onclick="window.open('https://github.com/astral-fate/CKD-Classification-model', '_blank')">Development (GitHub)</button>
+                <button class="tab" onclick="window.open('https://observant-beaufort-ffd.notion.site/CKD-classfication-835013fefb7646b99b276d73e945be05?pvs=4', '_blank')">Product Documentation</button>
+            </div>
+        </div>
+
+        <!-- Nafas Suggested Features -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-image">
+                    <!-- Replace with an appropriate image -->
+                    <img src="img/nafas_icon.png" alt="Nafas Image">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Nafas Suggested Features</h2>
+                    <p>Suggested Features for Nafas Mobile app, including gamification, and learning path, journaling and breath exercises.</p>
+                </div>
+            </div>
+
+            <div class="translation-tabs">
+                <button class="tab" onclick="window.open('https://www.behance.net/gallery/213524985/_', '_blank')">Product Documentation</button>
+                <button class="tab" onclick="window.open('https://www.linkedin.com/company/nafasmena/', '_blank')">Development (LinkedIn)</button>
+            </div>
+        </div>
+
+        <!-- Tabby UI Microcopy and Localization -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-image">
+                    <!-- Replace with an appropriate image -->
+                    <img src="img/tabby_icon.png" alt="Tabby Image">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Tabby UI Microcopy and Localization</h2>
+                    <p>Use case of Saudi dialect localization of the UI Microcopy for the amazon git user-flow, along with the success and failure messages.</p>
+                </div>
+            </div>
+
+            <div class="translation-tabs">
+                <button class="tab" onclick="window.open('https://www.behance.net/gallery/213993473/Tabby-Localization-Use-Case', '_blank')">Product Documentation</button>
+            </div>
+        </div>
     </div>
-
-    <script>
-         function showContent(contentId) {
-            // Get the project card containing this content
-           const projectCard = document.getElementById(contentId).closest('.project-card');
-            // Remove active class from all tabs and content sections within this project card
-           projectCard.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-           projectCard.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
-           // Add active class to selected tab and content
-           const tabIndex = contentId.replace(/[0-9]/g, '');
-           projectCard.querySelector(`.tab[onclick*="showContent('${contentId}')"]`).classList.add('active');
-           document.getElementById(contentId).classList.add('active');
-
-       }
-    </script>
 </body>
 </html>
