@@ -22,7 +22,7 @@ body {
     color: #333;
     text-decoration: none;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 0 5px; /* Adjusted margin for half spacing */
     border-radius: 4px;
     background: #fff;
     display: inline-block;
@@ -67,14 +67,14 @@ body {
     object-fit: contain; /* Adjust as needed: contain, cover, or none*/
 }
 
-.translation-tabs {
+.translation-tabs, .data-science-tabs { /*Combined selectors for DRY principle*/
     display: flex;
     justify-content: center;  /* Center tabs */
-    gap: 10px;
+    gap: 10px; /*Use gap instead of margins if supported*/
     margin-bottom: 20px;
 }
 
-.tab {
+.tab, .category-tab { /* Combined selectors for DRY principle */
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -83,14 +83,15 @@ body {
     background: #fff; /* added background to tab */
     color: #333; /* added color to tab */
     text-decoration: none; /*added this so that button does not have text underlines*/
+    margin: 0 5px; /*Added the spacing between buttons by half */
 }
 
-.tab.active {
+.tab.active, .category-tab.active {
     background: #333;
     color: white;
 }
 
-.tab:hover {
+.tab:hover, .category-tab:hover {
     background: #e0e0e0;
 }
 
@@ -136,46 +137,7 @@ body {
     display: none;
 }
 
-.data-science-tabs 
-    padding: 10px 20px;
-    border: 1px solid #ccc; /* ADDED BORDER */
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    background: #fff;
-    color: #333;
-    text-decoration: none;
-    margin-left: 5px; /* Add space to the left of each tab */
-    margin-right: 5px; /* Add space to the right of each tab */
-}
 
-
-
-
-/* Category Tabs */
-/* Category Tabs */
-.category-tab {
-    padding: 10px 20px;
-    border: 1px solid #ccc; /* ADDED BORDER */
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    background: #fff;
-    color: #333;
-    text-decoration: none;
-    margin-left: 5px; /* Add space to the left of each tab */
-    margin-right: 5px; /* Add space to the right of each tab */
-
-}
-
-.category-tab.active {
-    background: #333;
-    color: white;
-}
-
-.category-tab:hover {
-    background: #e0e0e0;
-}
 
 /* Category Content */
 .category-content {
