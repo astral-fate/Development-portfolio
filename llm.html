@@ -2,27 +2,96 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Data Science Projects | مشاريع علم البيانات</title>
+    <title>LLM Projects | مشاريع LLM</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="header">
-        <h1>Data Science Projects | مشاريع علم البيانات</h1>
+        <h1>LLM Projects | مشاريع LLM</h1>
     </div>
 
     <nav class="nav">
         <a href="index.html">Home | الرئيسية</a>
+        <a href="data-science.html">Data Science | علم البيانات</a>
     </nav>
 
-    <div class="data-science-tabs">
-        <a class="category-tab" href="llm.html">LLM</a>
-        <a class="category-tab" href="computer-vision.html">Computer Vision</a>
-        <a class="category-tab" href="machine-learning.html">Machine Learning</a>
-        <a class="category-tab" href="data-visualization.html">Data Visualization</a>
-    </div>
-
     <div class="projects-container">
-        <p>Data Science projects have been moved to their respective subcategory pages (LLM, Computer Vision, Machine Learning, Data Visualization).</p>
+        <!-- Bilingual CAT Tool -->
+        <div class="project-card">
+            <div class="project-header">
+               <div class="project-image">
+                 <!-- Replace with an appropriate image -->
+                 <img src="img/data_science_icon.png" alt="Bilingual CAT Tool Image">
+               </div>
+               <div class="project-info">
+                  <h2 class="project-title">Bilingual CAT Tool (PDF to Editable Word)</h2>
+                  <p>Provides a free and open-source alternative to commercial Computer-Assisted Translation (CAT) tools. It extracts text from PDFs, segmenting it for easy bilingual translation and presenting it in an editable table format.</p>
+               </div>
+            </div>
+
+            <div class="translation-tabs">
+              <button class="tab" onclick="window.open('https://bilingual-cat-tool.streamlit.app/', '_blank')">Deployed App</button>
+              <button class="tab" onclick="window.open('https://github.com/astral-fate/bilingual-cat-tool', '_blank')">Development (GitHub)</button>
+            </div>
+
+         </div>
+
+        <!-- Sentiment Analysis Project -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-image">
+                    <!-- Add an image for the Sentiment Analysis project -->
+                    <img src="img/sentiment_analysis_icon.png" alt="Sentiment Analysis Image">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Sentimental Analysis using LLaMA 3.1</h2>
+                    <p>Leverages in-context learning and Llama 3.1 8B to perform sentiment analysis on movie reviews from the IMDB dataset. It identifies the sentiment expressed within text using advanced NLP techniques.</p>
+                </div>
+            </div>
+
+            <div class="translation-tabs">
+                <button class="tab" onclick="window.open('https://sentimentanalyzer-llama.streamlit.app/', '_blank')">Deployed App</button>
+                <button class="tab" onclick="window.open('https://github.com/astral-fate/SentimentAnalyzer', '_blank')">Development (GitHub)</button>
+            </div>
+        </div>
+
+        <!-- PDF Summarizer Project -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-image">
+                    <!-- Replace with an appropriate image -->
+                    <img src="img/pdf_summarizer_icon.png" alt="PDF Summarizer Image">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">PDF Summarizer with OpenAI</h2>
+                    <p>An AI-powered tool that summarizes PDF documents using OpenAI's GPT models. Upload a PDF, extract the text, and generate a concise summary. Requires an OpenAI API key.</p>
+                </div>
+            </div>
+
+            <div class="translation-tabs">
+                <button class="tab" onclick="window.open('https://summrize-ai.streamlit.app/', '_blank')">Deployed App</button>
+                <button class="tab" onclick="window.open('https://github.com/astral-fate/summrize-ai', '_blank')">Development (GitHub)</button>
+            </div>
+        </div>
+
+        <!-- Smart Guide Project -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-image">
+                    <!-- Replace with an appropriate image -->
+                    <img src="img/smart_guide_icon.png" alt="Smart Guide Image">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Smart Guide</h2>
+                    <p>A personalized Saudi Arabia tourism assistant using OpenAI's GPT-4. Provides detailed recommendations based on user preferences for location, budget, trip type, family composition, and duration, offering tailored travel advice.</p>
+                </div>
+            </div>
+
+            <div class="translation-tabs">
+                <button class="tab" onclick="window.open('https://smart-guide.streamlit.app/', '_blank')">Deployed App</button>
+                <button class="tab" onclick="window.open('https://github.com/astral-fate/Smart-Guide', '_blank')">Development (GitHub)</button>
+            </div>
+        </div>
     </div>
 
 </body>
