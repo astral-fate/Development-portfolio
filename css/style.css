@@ -136,19 +136,19 @@ body {
     display: none;
 }
 
-.data-science-tabs {
-/*     display: flex;
-    justify-content: center; /* Centers the tabs horizontally */
-    margin-bottom: 20px;      /* Adds some space below the tabs */ */
-        padding: 10px 20px;
-    border: 1px solid #ccc;
+.data-science-tabs 
+    padding: 10px 20px;
+    border: 1px solid #ccc; /* ADDED BORDER */
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
     background: #fff;
     color: #333;
     text-decoration: none;
+    margin-left: 5px; /* Add space to the left of each tab */
+    margin-right: 5px; /* Add space to the right of each tab */
 }
+
 
 
 
@@ -156,13 +156,16 @@ body {
 /* Category Tabs */
 .category-tab {
     padding: 10px 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* ADDED BORDER */
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
     background: #fff;
     color: #333;
     text-decoration: none;
+    margin-left: 5px; /* Add space to the left of each tab */
+    margin-right: 5px; /* Add space to the right of each tab */
+
 }
 
 .category-tab.active {
