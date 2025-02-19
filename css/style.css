@@ -14,8 +14,9 @@ body {
     background: #f5f5f5;
     padding: 15px;
     border-radius: 8px;
-    margin: 20px 0;
+    margin: 20px auto; /* Center the nav */
     text-align: center;
+    width: fit-content; /* Make nav width fit content */
 }
 
 .nav a {
@@ -26,11 +27,12 @@ body {
     border-radius: 4px;
     background: #fff;
     display: inline-block;
-    border: 1px solid #ccc; /* Added border */
+    border: 1px solid #888; /* Added border - Darker Gray */
 }
 
 .nav a:hover {
     background: #e0e0e0;
+    border: 1px solid #888; /* Added border - Darker Gray */
 }
 
 .projects-container {
@@ -77,7 +79,7 @@ body {
 
 .tab, .category-tab { /* Combined selectors for DRY principle */
     padding: 10px 20px;
-    border: 1px solid #ccc; /* Added border */
+    border: 1px solid #888; /* Added border - Darker Gray */
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -95,7 +97,7 @@ body {
 
 .tab:hover, .category-tab:hover {
     background: #e0e0e0;
-    border: 1px solid #ccc; /* Added border */
+    border: 1px solid #888; /* Added border - Darker Gray */
 }
 
 .translation-content {
