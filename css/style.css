@@ -4,10 +4,12 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
 .header {
     text-align: center;
     padding: 40px 0;
 }
+
 .nav {
     background: #f5f5f5;
     padding: 15px;
@@ -15,6 +17,7 @@ body {
     margin: 20px 0;
     text-align: center;
 }
+
 .nav a {
     color: #333;
     text-decoration: none;
@@ -24,22 +27,24 @@ body {
     background: #fff;
     display: inline-block;
 }
+
 .nav a:hover {
     background: #e0e0e0;
 }
+
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Evenly space the cards */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Evenly space the cards */
 }
 
 .project-card {
-  width: calc(33.333% - 20px);  /* Adjust for spacing and card count */
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 30px;
-  box-sizing: border-box; /* Ensure padding and border is included in width */
+    width: calc(33.333% - 20px);  /* Adjust for spacing and card count */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-sizing: border-box; /* Ensure padding and border is included in width */
 }
 
 
@@ -54,18 +59,21 @@ body {
     justify-content: center;
     overflow: hidden;
 }
+
 .project-image img {
     max-width: 100%;
     max-height: 100%;
     display: block; /* to remove spacing below image*/
-     object-fit: contain; /* Adjust as needed: contain, cover, or none*/
+    object-fit: contain; /* Adjust as needed: contain, cover, or none*/
 }
+
 .translation-tabs {
     display: flex;
-     justify-content: center;  /* Center tabs */
+    justify-content: center;  /* Center tabs */
     gap: 10px;
     margin-bottom: 20px;
 }
+
 .tab {
     padding: 10px 20px;
     border: none;
@@ -76,28 +84,35 @@ body {
     color: #333; /* added color to tab */
     text-decoration: none; /*added this so that button does not have text underlines*/
 }
+
 .tab.active {
     background: #333;
     color: white;
 }
- .tab:hover {
+
+.tab:hover {
     background: #e0e0e0;
 }
+
 .translation-content {
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 4px;
 }
+
 .content-section {
     display: none;
 }
+
 .content-section.active {
     display: block;
 }
+
 .arabic {
     direction: rtl;
     text-align: right;
 }
+
 .english {
     direction: ltr;
     text-align: left;
@@ -111,72 +126,140 @@ body {
     border-radius: 8px;
     position: relative; /* Needed for aspect ratio trick */
 }
+
 .drive-preview h4 {
     margin-bottom: 15px;
 }
 
 /* Hide the drive preview */
 .drive-preview {
-  display: none;
+    display: none;
+}
+
+/* Data Science Tabs (Centered) */
+.data-science-tabs {
+    display: flex;
+    justify-content: center; /* Centers the tabs horizontally */
+    margin-bottom: 20px;      /* Adds some space below the tabs */
 }
 
 /* Category Tabs */
 .category-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .category-tab {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  background: #fff;
-  color: #333;
-  text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #ccc; /* ADDED BORDER */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
 }
 
 .category-tab.active {
-  background: #333;
-  color: white;
+    background: #333;
+    color: white;
 }
 
 .category-tab:hover {
-  background: #e0e0e0;
+    background: #e0e0e0;
 }
 
 /* Category Content */
 .category-content {
-  display: none;
+    display: none;
 }
 
 .category-content.active {
-  display: block;
+    display: block;
 }
 
 @media (max-width: 992px) {
-  .project-card {
-    width: calc(50% - 20px); /* Two columns on medium-sized screens */
-  }
+    .project-card {
+        width: calc(50% - 20px); /* Two columns on medium-sized screens */
+    }
 }
 
 @media (max-width: 768px) {
-  .project-card {
-     width: 100%; /* Single column on smaller screens */
-  }
+    .project-card {
+        width: 100%; /* Single column on smaller screens */
+    }
 }
 
 /* Pastel Color Palette */
-.project-card:nth-child(1) { background-color: #f0f8ff; } /* AliceBlue */
-.project-card:nth-child(2) { background-color: #faebd7; } /* AntiqueWhite */
-.project-card:nth-child(3) { background-color: #f5f5dc; } /* Beige */
-.project-card:nth-child(4) { background-color: #f0ffff; } /* Azure */
-.project-card:nth-child(5) { background-color: #fff0f5; } /* LavenderBlush */
-.project-card:nth-child(6) { background-color: #f8f8ff; } /* GhostWhite */
-.project-card:nth-child(7) { background-color: #f0e6ef; } /* Lavender */
-.project-card:nth-child(8) { background-color: #e0ffff; } /* LightCyan */
-.project-card:nth-child(9) { background-color: #f5fffa; } /* MintCream */
-.project-card:nth-child(10) { background-color: #ffe4e1; } /* MistyRose */
+.project-card:nth-child(1) {
+    background-color: #f0f8ff;
+}
+
+/* AliceBlue */
+.project-card:nth-child(2) {
+    background-color: #faebd7;
+}
+
+/* AntiqueWhite */
+.project-card:nth-child(3) {
+    background-color: #f5f5dc;
+}
+
+/* Beige */
+.project-card:nth-child(4) {
+    background-color: #f0ffff;
+}
+
+/* Azure */
+.project-card:nth-child(5) {
+    background-color: #fff0f5;
+}
+
+/* LavenderBlush */
+.project-card:nth-child(6) {
+    background-color: #f8f8ff;
+}
+
+/* GhostWhite */
+.project-card:nth-child(7) {
+    background-color: #f0e6ef;
+}
+
+/* Lavender */
+.project-card:nth-child(8) {
+    background-color: #e0ffff;
+}
+
+/* LightCyan */
+.project-card:nth-child(9) {
+    background-color: #f5fffa;
+}
+
+/* MintCream */
+.project-card:nth-child(10) {
+    background-color: #ffe4e1;
+}
+
+/* Skills Container Styles */
+.skills-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.skills-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.skills-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.skills-container li {
+    margin-bottom: 5px;
+}
