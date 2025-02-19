@@ -67,7 +67,7 @@ body {
     object-fit: contain; /* Adjust as needed: contain, cover, or none*/
 }
 
-.translation-tabs, .data-science-tabs { /*Combined selectors for DRY principle*/
+.translation-tabs, .data-science-tabs, .category-tabs { /*Combined selectors for DRY principle*/
     display: flex;
     justify-content: center;  /* Center tabs */
     gap: 10px; /*Use gap instead of margins if supported*/
