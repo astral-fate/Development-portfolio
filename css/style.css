@@ -137,9 +137,17 @@ body {
 }
 
 .data-science-tabs {
-    display: flex;
+/*     display: flex;
     justify-content: center; /* Centers the tabs horizontally */
-    margin-bottom: 20px;      /* Adds some space below the tabs */
+    margin-bottom: 20px;      /* Adds some space below the tabs */ */
+        padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
 }
 
 
