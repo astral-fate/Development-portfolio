@@ -1,26 +1,500 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark"> <!-- Default to dark theme -->
 <head>
     <meta charset="UTF-8">
-    <title>Translation Projects | المشاريع</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Link to external CSS (optional) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fatimah Emad Eldin | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base Variables */
+        :root {
+            --light-bg: #ffffff;
+            --light-text: #606c71;
+            --light-heading: #24292e;
+            --light-border: #d1d5da;
+            --light-link: #1e6bb8;
+            --light-card-bg: #f9f9f9;
+            --light-skill-bg: #eef;
+            --light-skill-text: #446;
+            
+            --dark-bg: #0B1120;
+            --dark-text: #a0aec0;
+            --dark-heading: #ffffff;
+            --dark-border: #374151;
+            --dark-link: #4FD1C5;
+            --dark-card-bg: #1f2937;
+            --dark-skill-bg: #374151;
+            --dark-skill-text: #d1d5db;
+
+            --header-bg-color: #159957;
+            --header-bg-color-secondary: #155799;
+            --accent-color: #4FD1C5;
+        }
+
+        /* Theme Styles */
+        html[data-theme='light'] {
+            --bg-color: var(--light-bg);
+            --text-color: var(--light-text);
+            --heading-color: var(--light-heading);
+            --border-color: var(--light-border);
+            --link-color: var(--light-link);
+            --card-bg: var(--light-card-bg);
+            --skill-bg: var(--light-skill-bg);
+            --skill-text: var(--light-skill-text);
+        }
+        html[data-theme='dark'] {
+            --bg-color: var(--dark-bg);
+            --text-color: var(--dark-text);
+            --heading-color: var(--dark-heading);
+            --border-color: var(--dark-border);
+            --link-color: var(--dark-link);
+            --card-bg: var(--dark-card-bg);
+            --skill-bg: var(--dark-skill-bg);
+            --skill-text: var(--dark-skill-text);
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0; padding: 0;
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        /* Landing Page Hero Section */
+        #home {
+            min-height: 100vh;
+            background-color: var(--dark-bg); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; position: relative;
+        }
+        #home::before {
+            content: ''; position: absolute; inset: 0;
+            background-image:
+                linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 20px 20px; opacity: 0.5;
+        }
+        .hero-content {
+            display: flex; flex-direction: column; align-items: center;
+            text-align: center; gap: 1.5rem; position: relative; z-index: 10; padding: 1rem;
+        }
+        .hero-greeting {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem; border-radius: 9999px; backdrop-filter: blur(10px);
+        }
+        .hero-greeting span {
+            background: linear-gradient(to right, var(--accent-color), #38bdf8);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 600;
+        }
+        .hero-title {
+            font-family: 'Poppins', sans-serif; font-size: 2.5rem;
+            font-weight: 700; letter-spacing: -0.05em; color: #fff;
+        }
+        .animated-headline {
+            display: block; /* Changed from inline-block to allow full width */
+            position: relative;
+            min-height: 1.2em;
+            margin-bottom: 0.25rem;
+        }
+        .animated-headline span {
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeWords 9s infinite;
+            background: linear-gradient(to right, var(--accent-color), #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .animated-headline span:nth-child(1) { animation-delay: 0s; }
+        .animated-headline span:nth-child(2) { animation-delay: 3s; }
+        .animated-headline span:nth-child(3) { animation-delay: 6s; }
+
+        @keyframes fadeWords {
+            0%, 33.33%, 100% { opacity: 0; transform: translate(-50%, 10px); }
+            3%, 30.33% { opacity: 1; transform: translate(-50%, 0); }
+        }
+        .hero-description { max-width: 600px; color: #d1d5db; }
+        .hero-cta-btn {
+            background: linear-gradient(to right, var(--accent-color), #38bdf8); color: var(--dark-bg);
+            padding: 0.75rem 2rem; border-radius: 9999px; font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .hero-cta-btn:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(79, 209, 197, 0.2); }
+
+        /* Portfolio Section Styles */
+        #portfolio { background-color: var(--bg-color); color: var(--text-color); }
+        .page-header {
+            color: #fff; text-align: center;
+            background-color: var(--header-bg-color);
+            background-image: linear-gradient(120deg, var(--header-bg-color-secondary), var(--header-bg-color));
+            padding: 4rem 2rem;
+        }
+        .nav-controls { display: flex; gap: 0.5rem; align-items: center; position: absolute; right: 1rem; top: 1rem; }
+        .control-btn {
+            background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white; width: 2.5rem; height: 2.5rem; border-radius: 9999px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: background-color 0.2s;
+        }
+        .control-btn:hover { background-color: rgba(255, 255, 255, 0.2); }
+        .control-btn svg { width: 1.25rem; height: 1.25rem; }
+
+        .project-name { font-size: 2.5rem; margin-top: 0; margin-bottom: 0.5rem; }
+        .project-tagline { font-size: 1.25rem; margin-bottom: 2rem; font-weight: 300; }
+        .btn-container { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .btn {
+            display: inline-block; background-color: rgba(255, 255, 255, 0.2);
+            color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.3rem; text-decoration: none;
+            transition: background-color 0.2s; border: 1px solid #fff; cursor: pointer;
+        }
+        .btn:hover { background-color: rgba(255, 255, 255, 0.3); }
+        .btn.active { background-color: rgba(255, 255, 255, 0.4); box-shadow: inset 0 0 10px rgba(0,0,0,0.2); }
+        
+        .main-content { max-width: 960px; margin: 0 auto; padding: 2rem; }
+        .tab-content { display: none; animation: fadeIn 0.5s ease-in-out; }
+        .tab-content.active-content { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .sub-btn-container {
+            display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; transition: border-color 0.3s;
+        }
+        .sub-btn { background-color: var(--card-bg); color: var(--link-color); border: 1px solid var(--border-color); }
+        .sub-btn:hover { background-color: var(--border-color); }
+        .sub-btn.active { background-color: var(--link-color); color: #fff; border-color: var(--link-color); }
+        .sub-tab-content { display: none; }
+        .sub-tab-content.active-sub-content { display: block; }
+
+        .main-content h1, .main-content h2, .main-content h3 {
+            margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;
+            color: var(--heading-color); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; transition: color 0.3s, border-color 0.3s;
+        }
+        .main-content h1:first-of-type, .main-content h2:first-of-type { margin-top: 0; }
+        .main-content p { margin-bottom: 1rem; }
+        .main-content a { color: var(--link-color); text-decoration: none; }
+        .main-content a:hover { text-decoration: underline; }
+
+        .projects-container { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 30px; margin-top: 2rem; }
+        .project-card {
+            width: 100%; border: 1px solid var(--border-color); border-radius: 8px;
+            padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); background-color: var(--card-bg);
+            display: flex; flex-direction: column; transition: all 0.3s;
+        }
+        .project-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .project-header { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
+        .project-image img { width: 80px; height: 80px; border-radius: 8px; object-fit: cover; background-color: #e0e0e0; }
+        .project-info { flex: 1; }
+        .project-title { font-size: 1.25rem; margin: 0 0 10px 0; color: var(--heading-color); border: none; padding: 0; }
+        .project-card p { font-size: 0.9rem; color: var(--text-color); flex-grow: 1; }
+        .project-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+        .project-buttons .tab {
+            background: var(--bg-color); color: var(--link-color); border: 1px solid var(--link-color);
+            padding: 8px 16px; border-radius: 5px; text-align: center; text-decoration: none;
+            cursor: pointer; transition: all 0.3s;
+        }
+        .project-buttons .tab:hover { background-color: var(--link-color); color: #fff; }
+
+        .skills-container { margin-top: 2rem; }
+        .skills-container ul { list-style-type: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+        .skills-container li { background-color: var(--skill-bg); color: var(--skill-text); padding: 5px 15px; border-radius: 15px; font-size: 0.9em; transition: background-color 0.3s, color 0.3s; }
+        
+        /* Footer Styles */
+        .site-footer { 
+            padding: 4rem 2rem; 
+            margin-top: 2rem;
+            background-color: #0f172a; /* dark slate */
+            color: #a0aec0; /* gray-400 */
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 2rem;
+            max-width: 1280px;
+            margin: auto;
+        }
+        .footer-column h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .footer-column a {
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+        .footer-column a:hover { color: var(--accent-color); }
+        .footer-socials { display: flex; gap: 1rem; }
+        .social-icon {
+            width: 2.5rem; height: 2.5rem;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 0.5rem;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s;
+        }
+        .social-icon:hover { transform: scale(1.1) translateY(-4px); background-color: rgba(255,255,255,0.1);}
+        .social-icon svg { width: 1.25rem; height: 1.25rem; color: #a0aec0; }
+        .social-icon:hover svg { color: #fff; }
+        
+        .footer-bottom { 
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media screen and (min-width: 768px) { .footer-content { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media screen and (min-width: 1024px) { .footer-content { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+        @media screen and (min-width: 640px) { .hero-title { font-size: 3.75rem; } }
+        @media screen and (min-width: 768px) { .project-card { width: calc(50% - 15px); } }
+        @media screen and (min-width: 1024px) { .project-card { width: calc(33.333% - 20px); } }
+    </style>
 </head>
-<body>
-    <div class="header">
-        <h1> Projects | المشاريع</h1>
-    </div>
+<body data-lang="en">
+    <!-- Landing Page Section -->
+    <section id="home">
+        <div class="hero-content">
+            <div class="hero-greeting" data-translate-key="hero.greeting">Hello, I'm <span>Fatimah Emad Eldin</span></div>
+            <h1 class="hero-title">
+                <div class="animated-headline">
+                    <span>Product Management</span>
+                    <span>Data Science</span>
+                    <span>Development</span>
+                </div>
+                <div data-translate-key="hero.portfolio">Portfolio</div>
+            </h1>
+            <p class="hero-description" data-translate-key="hero.description">
+                A passionate professional with a diverse skill set. I specialize in leveraging data to build intelligent products and create meaningful user experiences.
+            </p>
+            <div>
+                <a href="#portfolio" class="hero-cta-btn" data-translate-key="hero.cta">View My Work</a>
+            </div>
+        </div>
+    </section>
 
-    <nav class="nav">
-        <a href="index.html">Home | الرئيسية</a>
-        <a href="#projects">Projects | المشاريع</a>
-    </nav>
+    <!-- Main Portfolio Section -->
+    <section id="portfolio">
+        <header class="page-header relative">
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+                    <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <button id="lang-toggle" class="control-btn" aria-label="Toggle language">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </button>
+            </div>
+            <h1 class="project-name" data-translate-key="portfolio.name">Explore My Projects!</h1>
+            <h2 class="project-tagline" data-translate-key="portfolio.tagline">Product Management | Data Science | Development</h2>
+            <div class="btn-container">
+                <a href="#" class="btn tab-link active" data-tab="about" data-translate-key="nav.about">About Me</a>
+                <a href="#" class="btn tab-link" data-tab="product" data-translate-key="nav.product">Product</a>
+                <a href="#" class="btn tab-link" data-tab="data-science" data-translate-key="nav.data_science">Data Science</a>
+                <a href="#" class="btn tab-link" data-tab="development" data-translate-key="nav.development">Development</a>
+            </div>
+        </header>
 
-    <!-- Category Tabs -->
-    <div class="category-tabs">
-        <a class="category-tab" href="product.html">Product</a>
-        <a class="category-tab" href="data-science.html">Data Science</a>
-        <a class="category-tab" href="development.html">Development</a>
-    </div>
+        <main class="main-content">
+            <section id="about" class="tab-content active-content">
+                <h1 data-translate-key="about.title">About Me</h1>
+                <p data-translate-key="about.description">Welcome to my portfolio. I am a passionate professional with a diverse skill set spanning product management, data science, and software development. I specialize in leveraging data to build intelligent products and create meaningful user experiences. Click on the categories above to explore a selection of projects that showcase my work.</p>
+            </section>
+            
+            <section id="product" class="tab-content">
+                 <h1 data-translate-key="product.title">Digital Product Projects</h1>
+                <div class="skills-container"><h3 data-translate-key="skills.title">Core Skills</h3><ul><li>Product Roadmapping</li><li>Agile Methodologies</li><li>Jira & Notion</li><li>Backlog Management</li><li>User Journey Mapping</li><li>Market Research</li><li>UX/UI Design Principles</li><li>Quality Assurance (QA)</li><li>User Acceptance Testing (UAT)</li></ul></div>
+                <div class="projects-container">
+                    <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/7FDBFF/FFFFFF?text=PenceAI" alt="PenceAI Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="product.penceai.title">PenceAI</h3></div></div><p data-translate-key="product.penceai.desc">AI-advisor to help achieve goals of sustainable financial management. The main goal of the PenceAI project is to develop an AI-powered personal finance advisor to help users manage their finances, provide budgeting advice, and suggest investments.</p><div class="project-buttons"><a href="https://github.com/astral-fate/PenceAI" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a><a href="https://observant-beaufort-ffd.notion.site/PenceAI-f3e584524ff341e28f7a9778fb1c1d91" target="_blank" class="tab" data-translate-key="buttons.product_docs">Product Docs</a></div></div>
+                    <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/2ECC40/FFFFFF?text=Nafas" alt="Nafas Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="product.nafas.title">Nafas Mobile App: Product Enhancement</h3></div></div><p data-translate-key="product.nafas.desc">Suggested Features for Nafas Mobile app, including gamification, a learning path, journaling and breath exercises.</p><div class="project-buttons"><a href="https://www.behance.net/gallery/213524985/_" target="_blank" class="tab" data-translate-key="buttons.product_docs">Product Documentation</a><a href="https://www.linkedin.com/company/nafasmena/" target="_blank" class="tab" data-translate-key="buttons.linkedin">Company LinkedIn</a></div></div>
+                    <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/FFDC00/FFFFFF?text=Tabby" alt="Tabby Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="product.tabby.title">Tabby UI Microcopy and Localization</h3></div></div><p data-translate-key="product.tabby.desc">Use case of Saudi dialect localization of the UI Microcopy for the amazon git user-flow, along with the success and failure messages.</p><div class="project-buttons"><a href="https://www.behance.net/gallery/213993473/Tabby-Localization-Use-Case" target="_blank" class="tab" data-translate-key="buttons.product_docs">Product Documentation</a></div></div>
+                </div>
+            </section>
 
+            <section id="data-science" class="tab-content">
+                <h1 data-translate-key="datascience.title">Data Science Projects</h1>
+                <div class="skills-container"><h3 data-translate-key="skills.title">Core Skills</h3><ul><li>Python</li><li>TensorFlow</li><li>Keras</li><li>PyTorch</li><li>Scikit-learn</li><li>Pandas</li><li>NumPy</li><li>Streamlit</li><li>OpenAI API</li><li>Tableau</li><li>SQL</li><li>Git</li><li>Docker</li></ul></div>
+                <div class="sub-btn-container">
+                    <a href="#" class="btn sub-btn active" data-sub-tab="llm" data-translate-key="datascience.nav.llm">LLM</a>
+                    <a href="#" class="btn sub-btn" data-sub-tab="computer-vision" data-translate-key="datascience.nav.cv">Computer Vision</a>
+                    <a href="#" class="btn sub-btn" data-sub-tab="machine-learning" data-translate-key="datascience.nav.ml">Machine Learning</a>
+                    <a href="#" class="btn sub-btn" data-sub-tab="data-visualization" data-translate-key="datascience.nav.dataviz">Data Visualization</a>
+                </div>
+                <div id="llm" class="sub-tab-content active-sub-content">
+                    <h2 data-translate-key="datascience.llm.title">LLM Projects</h2>
+                    <div class="projects-container">
+                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/0074D9/FFFFFF?text=CAT" alt="Bilingual CAT Tool Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.llm.bilingual.title">Bilingual CAT Tool (PDF to Word)</h3></div></div><p data-translate-key="datascience.llm.bilingual.desc">Provides a free, open-source alternative to commercial CAT tools. It extracts text from PDFs, segmenting it for easy bilingual translation and presenting it in an editable table format.</p><div class="project-buttons"><a href="https://bilingual-cat-tool.streamlit.app/" target="_blank" class="tab" data-translate-key="buttons.app">Deployed App</a><a href="https://github.com/astral-fate/bilingual-cat-tool" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a></div></div>
+                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/FF4136/FFFFFF?text=Summ" alt="Summrize.ai Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.llm.summrize.title">Summrize.ai</h3></div></div><p data-translate-key="datascience.llm.summrize.desc">An AI-powered tool for summarizing complex legal documents, such as terms of service and privacy policies, into clear, concise, and easy-to-understand summaries.</p><div class="project-buttons"><a href="https://summrize-ai.streamlit.app/" target="_blank" class="tab" data-translate-key="buttons.app">Deployed App</a><a href="https://github.com/astral-fate/summrize-ai" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a></div></div>
+                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/3D9970/FFFFFF?text=Guide" alt="Smart Guide Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.llm.smartguide.title">Smart Guide</h3></div></div><p data-translate-key="datascience.llm.smartguide.desc">A personalized Saudi Arabia tourism assistant using OpenAI's GPT-4. Provides detailed recommendations based on user preferences for location, budget, trip type, and more.</p><div class="project-buttons"><a href="https://smart-guide.streamlit.app/" target="_blank" class="tab" data-translate-key="buttons.app">Deployed App</a><a href="https://github.com/astral-fate/Smart-Guide" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a></div></div>
+                    </div>
+                </div>
+                <div id="computer-vision" class="sub-tab-content">
+                     <h2 data-translate-key="datascience.cv.title">Computer Vision</h2>
+                    <div class="projects-container">
+                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/B10DC9/FFFFFF?text=ArSL" alt="ArSL Project Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.cv.arsl.title">Deep Learning for Arabic Sign Language</h3></div></div><p data-translate-key="datascience.cv.arsl.desc">This project utilizes the Arabic Sign Language (ArSL) dataset to train a deep learning model, creating a computer vision application that assists people to foster inclusive communication.</p><div class="project-buttons"><a href="https://github.com/astral-fate/ArSL" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a><a href="https://drive.google.com/drive/u/0/folders/1iIxu7yiE4ldKZDKv_tfpn6IsBU2fGAIr" target="_blank" class="tab" data-translate-key="buttons.experiment">The Experiment</a></div></div>
+                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/FF851B/FFFFFF?text=PT" alt="MyPhysio Project Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.cv.myphysio.title">CV for Remote Physical Therapy</h3></div></div><p data-translate-key="datascience.cv.myphysio.desc">This project uses a dataset of PT exercises to train a deep learning model, creating a computer vision application that assists patients as they perform rehabilitation exercises.</p><div class="project-buttons"><a href="https://github.com/astral-fate/Myphysio" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a></div></div>
+                    </div>
+                </div>
+                <div id="machine-learning" class="sub-tab-content"><h2 data-translate-key="datascience.ml.title">Machine Learning</h2><div class="projects-container"><p data-translate-key="datascience.ml.desc">No projects currently listed in this category. Check back soon!</p></div></div>
+                <div id="data-visualization" class="sub-tab-content">
+                    <h2 data-translate-key="datascience.dataviz.title">Data Visualization</h2>
+                    <div class="projects-container">
+                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/F012BE/FFFFFF?text=Mon" alt="Monsha'at Report Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.dataviz.monshaat.title">Monsha'at 2023 Report</h3></div></div><p data-translate-key="datascience.dataviz.monshaat.desc">Analysis of Saudi Arabia's business establishments in Q1 2023, categorized by size and economic activity, sourced from Monsha'at's Open Data Platform.</p><div class="project-buttons"><a href="https://public.tableau.com/app/profile/fatma.mohammed3602/viz/monshaat/Dashboard1" target="_blank" class="tab" data-translate-key="buttons.dashboard">Tableau Dashboard</a><a href="https://data.gov.sa/Data/en/dataset/establishments_by_size_and_activity_2023_q1/resource/123a1073-b38b-4b11-9257-8178a9c789a7" target="_blank" class="tab" data-translate-key="buttons.dataset">Dataset</a></div></div>
+                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/AAAAAA/FFFFFF?text=USA" alt="USA Retail Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.dataviz.usaretail.title">USA Retail Superstores</h3></div></div><p data-translate-key="datascience.dataviz.usaretail.desc">Analysis of a US retail superstore's data, creating a dashboard to track key metrics and provide insights to management. The dashboard gives an overview of performance and identifies areas for improvement.</p><div class="project-buttons"><a href="https://public.tableau.com/app/profile/fatma.mohammed3602/viz/USARetailSuperstoresBusiness/Dashboard1" target="_blank" class="tab" data-translate-key="buttons.dashboard">Tableau Dashboard</a><a href="https://www.kaggle.com/datasets/vivek468/superstore-dataset-final" target="_blank" class="tab" data-translate-key="buttons.dataset">Dataset</a></div></div>
+                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/01FF70/FFFFFF?text=TATA" alt="TATA Retail Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.dataviz.tata.title">TATA: Online Retail Analysis</h3></div></div><p data-translate-key="datascience.dataviz.tata.desc">A consultant-led analysis of an online retail store's data to identify key revenue drivers and provide strategic recommendations to the CEO and CMO from marketing and operations perspectives.</p><div class="project-buttons"><a href="https://public.tableau.com/app/profile/fatma.mohammed3602/viz/tatadashboard_16898128348040/Tatadashbaord" target="_blank" class="tab" data-translate-key="buttons.dashboard">Tableau Dashboard</a><a href="https://www.kaggle.com/datasets/ishanshrivastava28/tata-online-retail-dataset" target="_blank" class="tab" data-translate-key="buttons.dataset">Dataset</a></div></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="development" class="tab-content">
+                <h1 data-translate-key="development.title">Development Projects</h1>
+                <div class="projects-container"><p data-translate-key="development.desc">No projects currently listed in this category. Please check back later!</p></div>
+            </section>
+        </main>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4 class="text-xl font-bold mb-6 text-white">Fatimah Emad Eldin</h4>
+                <p data-translate-key="hero.description">A passionate professional with a diverse skill set. I specialize in leveraging data to build intelligent products and create meaningful user experiences.</p>
+            </div>
+            <div class="footer-column">
+                 <h4 class="text-xl font-bold mb-6 text-white" data-translate-key="footer.resources">Resources</h4>
+                 <a href="#portfolio" data-tab="product" class="tab-link-footer" data-translate-key="nav.product">Product</a>
+                 <a href="#portfolio" data-tab="data-science" class="tab-link-footer" data-translate-key="nav.data_science">Data Science</a>
+                 <a href="#portfolio" data-tab="development" class="tab-link-footer" data-translate-key="nav.development">Development</a>
+            </div>
+            <div class="footer-column">
+                <h4 class="text-xl font-bold mb-6 text-white" data-translate-key="footer.social">Socials</h4>
+                <div class="footer-socials">
+                    <a href="https://github.com/astral-fate" target="_blank" class="social-icon" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                    <a href="https://www.linkedin.com/in/astral-fate/" target="_blank" class="social-icon" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    <a href="mailto:fatemah.it@gmail.com" class="social-icon" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="footer-year">2024</span> Fatimah Emad Eldin. <span data-translate-key="footer.rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- TRANSLATION LOGIC ---
+            const translations = {
+                en: { "hero.greeting": "Hello, I'm ", "hero.portfolio": "Portfolio", "hero.description": "A passionate professional with a diverse skill set. I specialize in leveraging data to build intelligent products and create meaningful user experiences.", "hero.cta": "View My Work", "portfolio.name": "Explore My Projects!", "portfolio.tagline": "Product Management | Data Science | Development", "nav.about": "About Me", "nav.product": "Product", "nav.data_science": "Data Science", "nav.development": "Development", "about.title": "About Me", "about.description": "Welcome to my portfolio. I am a passionate professional with a diverse skill set spanning product management, data science, and software development. I specialize in leveraging data to build intelligent products and create meaningful user experiences. Click on the categories above to explore a selection of projects that showcase my work.", "product.title": "Digital Product Projects", "skills.title": "Core Skills", "buttons.development": "Development (GitHub)", "buttons.product_docs": "Product Docs", "buttons.linkedin": "Company LinkedIn", "buttons.app": "Deployed App", "buttons.experiment": "The Experiment", "buttons.dashboard": "Tableau Dashboard", "buttons.dataset": "Dataset", "product.penceai.title": "PenceAI", "product.penceai.desc": "AI-advisor to help achieve goals of sustainable financial management. The main goal of the PenceAI project is to develop an AI-powered personal finance advisor to help users manage their finances, provide budgeting advice, and suggest investments.", "product.nafas.title": "Nafas Mobile App: Product Enhancement", "product.nafas.desc": "Suggested Features for Nafas Mobile app, including gamification, a learning path, journaling and breath exercises.", "product.tabby.title": "Tabby UI Microcopy and Localization", "product.tabby.desc": "Use case of Saudi dialect localization of the UI Microcopy for the amazon git user-flow, along with the success and failure messages.", "datascience.title": "Data Science Projects", "datascience.nav.llm": "LLM", "datascience.nav.cv": "Computer Vision", "datascience.nav.ml": "Machine Learning", "datascience.nav.dataviz": "Data Visualization", "datascience.llm.title": "LLM Projects", "datascience.llm.bilingual.title": "Bilingual CAT Tool (PDF to Word)", "datascience.llm.bilingual.desc": "Provides a free, open-source alternative to commercial CAT tools. It extracts text from PDFs, segmenting it for easy bilingual translation and presenting it in an editable table format.", "datascience.llm.summrize.title": "Summrize.ai", "datascience.llm.summrize.desc": "An AI-powered tool for summarizing complex legal documents, such as terms of service and privacy policies, into clear, concise, and easy-to-understand summaries.", "datascience.llm.smartguide.title": "Smart Guide", "datascience.llm.smartguide.desc": "A personalized Saudi Arabia tourism assistant using OpenAI's GPT-4. Provides detailed recommendations based on user preferences for location, budget, trip type, and more.", "datascience.cv.title": "Computer Vision", "datascience.cv.arsl.title": "Deep Learning for Arabic Sign Language", "datascience.cv.arsl.desc": "This project utilizes the Arabic Sign Language (ArSL) dataset to train a deep learning model, creating a computer vision application that assists people to foster inclusive communication.", "datascience.cv.myphysio.title": "CV for Remote Physical Therapy", "datascience.cv.myphysio.desc": "This project uses a dataset of PT exercises to train a deep learning model, creating a computer vision application that assists patients as they perform rehabilitation exercises.", "datascience.ml.title": "Machine Learning", "datascience.ml.desc": "No projects currently listed in this category. Check back soon!", "datascience.dataviz.title": "Data Visualization", "datascience.dataviz.monshaat.title": "Monsha'at 2023 Report", "datascience.dataviz.monshaat.desc": "Analysis of Saudi Arabia's business establishments in Q1 2023, categorized by size and economic activity, sourced from Monsha'at's Open Data Platform.", "datascience.dataviz.usaretail.title": "USA Retail Superstores", "datascience.dataviz.usaretail.desc": "Analysis of a US retail superstore's data, creating a dashboard to track key metrics and provide insights to management. The dashboard gives an overview of performance and identifies areas for improvement.", "datascience.dataviz.tata.title": "TATA: Online Retail Analysis", "datascience.dataviz.tata.desc": "A consultant-led analysis of an online retail store's data to identify key revenue drivers and provide strategic recommendations to the CEO and CMO from marketing and operations perspectives.", "development.title": "Development Projects", "development.desc": "No projects currently listed in this category. Please check back later!", "footer.resources": "Resources", "footer.social": "Socials", "footer.rights": "All rights reserved." },
+                ar: { "hero.greeting": "أهلاً، أنا ", "hero.portfolio": "ملف الأعمال", "hero.description": "متخصصة شغوفة ذات مجموعة متنوعة من المهارات. أتخصص في الاستفادة من البيانات لبناء منتجات ذكية وخلق تجارب مستخدم ذات معنى.", "hero.cta": "شاهد أعمالي", "portfolio.name": "ملف أعمال فاطمة محمد", "portfolio.tagline": "إدارة المنتجات | علم البيانات | التطوير", "nav.about": "عني", "nav.product": "المنتجات", "nav.data_science": "علم البيانات", "nav.development": "التطوير", "about.title": "عني", "about.description": "مرحباً بكم في ملف أعمالي. أنا متخصصة شغوفة بمجموعة متنوعة من المهارات تشمل إدارة المنتجات وعلم البيانات وتطوير البرمجيات. أتخصص في الاستفادة من البيانات لبناء منتجات ذكية وخلق تجارب مستخدم ذات معنى. انقر على الفئات أعلاه لاستكشاف مجموعة من المشاريع التي تعرض أعمالي.", "product.title": "مشاريع المنتجات الرقمية", "skills.title": "المهارات الأساسية", "buttons.development": "التطوير (GitHub)", "buttons.product_docs": "مستندات المنتج", "buttons.linkedin": "الشركة (LinkedIn)", "buttons.app": "التطبيق المباشر", "buttons.experiment": "التجربة", "buttons.dashboard": "لوحة البيانات", "buttons.dataset": "مجموعة البيانات", "product.penceai.title": "PenceAI", "product.penceai.desc": "مستشار ذكاء اصطناعي للمساعدة في تحقيق أهداف الإدارة المالية المستدامة. الهدف الرئيسي هو تطوير مستشار مالي شخصي لمساعدة المستخدمين على إدارة شؤونهم المالية وتقديم المشورة بشأن الميزانية واقتراح الاستثمارات.", "product.nafas.title": "تطبيق نفَس: تحسين المنتج", "product.nafas.desc": "ميزات مقترحة لتطبيق نفَس، بما في ذلك التلعيب، ومسار تعليمي، واليوميات، وتمارين التنفس.", "product.tabby.title": "تابي: تصميم النصوص وتوطينها", "product.tabby.desc": "حالة استخدام لتوطين النصوص باللهجة السعودية لواجهة مستخدم تدفق هدايا أمازون، مع رسائل النجاح والفشل.", "datascience.title": "مشاريع علم البيانات", "datascience.nav.llm": "نماذج اللغة الكبيرة", "datascience.nav.cv": "رؤية الحاسوب", "datascience.nav.ml": "تعلم الآلة", "datascience.nav.dataviz": "تصور البيانات", "datascience.llm.title": "مشاريع نماذج اللغة الكبيرة", "datascience.llm.bilingual.title": "أداة ترجمة بمساعدة الحاسوب ثنائية اللغة", "datascience.llm.bilingual.desc": "توفر بديلاً مجانياً ومفتوح المصدر لأدوات الترجمة التجارية. تستخرج النصوص من ملفات PDF وتقسمها لتسهيل الترجمة وتقدمها في جدول قابل للتحرير.", "datascience.llm.summrize.title": "Summrize.ai", "datascience.llm.summrize.desc": "أداة مدعومة بالذكاء الاصطناعي لتلخيص المستندات القانونية المعقدة، مثل شروط الخدمة وسياسات الخصوصية، إلى ملخصات واضحة وموجزة وسهلة الفهم.", "datascience.llm.smartguide.title": "المرشد الذكي", "datascience.llm.smartguide.desc": "مساعد سياحي شخصي في المملكة العربية السعودية باستخدام GPT-4 من OpenAI. يقدم توصيات مفصلة بناءً على تفضيلات المستخدم للموقع والميزانية ونوع الرحلة والمزيد.", "datascience.cv.title": "مشاريع رؤية الحاسوب", "datascience.cv.arsl.title": "تعلم عميق للغة الإشارة العربية", "datascience.cv.arsl.desc": "يستخدم هذا المشروع مجموعة بيانات لغة الإشارة العربية لتدريب نموذج تعلم عميق، لإنشاء تطبيق رؤية حاسوبية يساعد الأشخاص على تعزيز التواصل الشامل.", "datascience.cv.myphysio.title": "رؤية الحاسوب للعلاج الطبيعي عن بعد", "datascience.cv.myphysio.desc": "يستخدم هذا المشروع مجموعة بيانات من تمارين العلاج الطبيعي لتدريب نموذج تعلم عميق، لإنشاء تطبيق رؤية حاسوبية يساعد المرضى أثناء أداء تمارين إعادة التأهيل.", "datascience.ml.title": "مشاريع تعلم الآلة", "datascience.ml.desc": "لا توجد مشاريع مدرجة حاليًا في هذه الفئة. تحقق مرة أخرى قريبًا!", "datascience.dataviz.title": "مشاريع تصور البيانات", "datascience.dataviz.monshaat.title": "تقرير منشآت 2023", "datascience.dataviz.monshaat.desc": "تحليل لمنشآت الأعمال في المملكة العربية السعودية في الربع الأول من عام 2023، مصنفة حسب الحجم والنشاط الاقتصادي، مصدرها منصة البيانات المفتوحة لمنشآت.", "datascience.dataviz.usaretail.title": "المتاجر الكبرى في الولايات المتحدة", "datascience.dataviz.usaretail.desc": "تحليل بيانات متجر تجزئة كبير في الولايات المتحدة، وإنشاء لوحة معلومات لتتبع المقاييس الرئيسية وتقديم رؤى للإدارة. تقدم اللوحة نظرة عامة على الأداء وتحدد مجالات التحسين.", "datascience.dataviz.tata.title": "تحليل TATA للبيع بالتجزئة عبر الإنترنت", "datascience.dataviz.tata.desc": "تحليل بقيادة استشاري لبيانات متجر بيع بالتجزئة عبر الإنترنت لتحديد محركات الإيرادات الرئيسية وتقديم توصيات استراتيجية للمدير التنفيذي ومدير التسويق من منظور العمليات والتسويق.", "development.title": "مشاريع التطوير", "development.desc": "لا توجد مشاريع مدرجة حاليًا في هذه الفئة. يرجى التحقق مرة أخرى لاحقًا!", "footer.resources": "المصادر", "footer.social": "التواصل", "footer.rights": "جميع الحقوق محفوظة." }
+            };
+            
+            const langToggle = document.getElementById('lang-toggle');
+            let currentLang = localStorage.getItem('lang') || 'en';
+
+            const translatePage = () => {
+                document.querySelectorAll('[data-translate-key]').forEach(el => {
+                    const key = el.getAttribute('data-translate-key');
+                    const translation = translations[currentLang][key];
+                    if (key === 'hero.greeting') {
+                        const nameSpan = el.querySelector('span');
+                        el.innerHTML = `${translation}<span>${nameSpan.innerHTML}</span>`;
+                    } else if (translation) {
+                        el.innerText = translation;
+                    }
+                });
+                document.body.setAttribute('data-lang', currentLang);
+                document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+            };
+
+            langToggle.addEventListener('click', () => {
+                currentLang = currentLang === 'en' ? 'ar' : 'en';
+                localStorage.setItem('lang', currentLang);
+                translatePage();
+            });
+
+            // --- THEME TOGGLE LOGIC ---
+            const themeToggle = document.getElementById('theme-toggle');
+            const sunIcon = document.getElementById('theme-icon-sun');
+            const moonIcon = document.getElementById('theme-icon-moon');
+            let currentTheme = localStorage.getItem('theme') || 'dark';
+
+            const applyTheme = (theme) => {
+                document.documentElement.setAttribute('data-theme', theme);
+                if (theme === 'dark') {
+                    sunIcon.classList.add('hidden');
+                    moonIcon.classList.remove('hidden');
+                } else {
+                    moonIcon.classList.remove('hidden');
+                    sunIcon.classList.remove('hidden');
+                }
+            };
+
+            themeToggle.addEventListener('click', () => {
+                currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                localStorage.setItem('theme', currentTheme);
+                applyTheme(currentTheme);
+            });
+            
+            // --- FOOTER YEAR ---
+            document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+            // Initial setup on page load
+            applyTheme(currentTheme);
+            translatePage();
+
+            // --- TAB LOGIC ---
+            const allTabLinks = document.querySelectorAll('.tab-link, .tab-link-footer');
+            const mainTabLinks = document.querySelectorAll('.page-header .tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            allTabLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    document.querySelector('#portfolio').scrollIntoView({ behavior: 'smooth' });
+
+                    mainTabLinks.forEach(innerLink => {
+                         innerLink.classList.toggle('active', innerLink.getAttribute('data-tab') === tabId);
+                    });
+                    
+                    tabContents.forEach(content => {
+                        content.classList.toggle('active-content', content.id === tabId);
+                    });
+                });
+            });
+
+            // Sub-Tab Functionality
+            const subNavContainers = document.querySelectorAll('.sub-btn-container');
+
+            subNavContainers.forEach(container => {
+                const subTabLinks = container.querySelectorAll('.sub-btn');
+                const parentSection = container.closest('.tab-content');
+                const subTabContents = parentSection.querySelectorAll('.sub-tab-content');
+
+                subTabLinks.forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault(); event.stopPropagation();
+                        const subTabId = this.getAttribute('data-sub-tab');
+                        subTabLinks.forEach(innerLink => innerLink.classList.remove('active'));
+                        this.classList.add('active');
+                        subTabContents.forEach(content => {
+                            content.classList.toggle('active-sub-content', content.id === subTabId);
+                        });
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
