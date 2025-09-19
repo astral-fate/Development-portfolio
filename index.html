@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark"> <!-- Default to dark theme -->
-<head>
+<html lang="en" data-theme="dark"> <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -249,15 +248,11 @@
     </style>
 </head>
 <body data-lang="en">
-    <!-- Landing Page Section -->
     <section id="home">
         <div class="nav-controls">
             <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
                 <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
-            <button id="lang-toggle" class="control-btn" aria-label="Toggle language">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </button>
         </div>
         <div class="hero-content">
@@ -279,7 +274,6 @@
         </div>
     </section>
 
-    <!-- New Detailed About Me Section -->
     <section id="about-me-detailed">
         <div class="about-detailed-container">
             <div class="about-image-wrapper">
@@ -304,13 +298,19 @@
                 <div class="about-contact-info">
                     <div class="contact-item"><div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div><div>Professional Master's</div><div class="text-sm">Software Engineering</div></div></div>
                     <div class="contact-item"><div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div>Email</div><div>fatemah.it@gmail.com</div></div></div>
-                     <a href="https://github.com/astral-fate/Fatma_CV/blob/main/Fatma%20Tech%2025.pdf" download class="hero-cta-btn text-center" style="background: var(--dark-skill-bg); color: var(--dark-link); text-decoration: none;"><span data-translate-key="buttons.download_cv">Download CV</span></a>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem; width: 100%;">
+                        <a href="https://scholar.google.com/citations?user=CfX6eA8AAAAJ" target="_blank" rel="noopener noreferrer" class="hero-cta-btn text-center" style="background: var(--dark-skill-bg); color: var(--dark-link); text-decoration: none; flex: 1; padding: 0.75rem 1rem; font-size: 0.9rem;">
+                            Google Scholar
+                        </a>
+                        <a href="https://huggingface.co/FatimahEmadEldin" target="_blank" rel="noopener noreferrer" class="hero-cta-btn text-center" style="background: var(--dark-skill-bg); color: var(--dark-link); text-decoration: none; flex: 1; padding: 0.75rem 1rem; font-size: 0.9rem;">
+                            Hugging Face
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Detailed Info Section -->
     <section class="info-section" id="info">
         <div class="max-w-5xl mx-auto px-4">
             <div class="about-info-tabs">
@@ -361,9 +361,7 @@
        
    
 
-    <!-- Main Portfolio Section -->
     <section id="portfolio">
-        <!-- ... existing portfolio header ... -->
         <header class="page-header relative">
             <h1 class="project-name" data-translate-key="portfolio.name">Projects</h1>
             <h2 class="project-tagline" data-translate-key="portfolio.tagline">Product Management | Data Science | Development</h2>
@@ -374,8 +372,7 @@
             </div>
         </header>
         <main class="main-content">
-            <!-- All project sections from previous steps go here -->
-             <section id="product" class="tab-content active">
+            <section id="product" class="tab-content active">
                  <h1 data-translate-key="product.title">Digital Product Projects</h1>
                 <div class="skills-container"><h3 data-translate-key="skills.title">Core Skills</h3><ul><li>Product Roadmapping</li><li>Agile Methodologies</li><li>Jira & Notion</li><li>Backlog Management</li><li>User Journey Mapping</li><li>Market Research</li><li>UX/UI Design Principles</li><li>Quality Assurance (QA)</li><li>User Acceptance Testing (UAT)</li></ul></div>
                 <div class="projects-container">
@@ -397,7 +394,6 @@
                 <div id="llm" class="sub-tab-content active-sub-content">
                     <h2 data-translate-key="datascience.llm.title">LLM Projects</h2>
                     <div class="projects-container">
-                        <!-- NEW PROJECT: Sakinah-AI -->
                         <div class="project-card">
                             <div class="project-header">
                                 <div class="project-image"><img src="https://placehold.co/80x80/4FD1C5/0B1120?text=Sakinah" alt="Sakinah-AI Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div>
@@ -409,7 +405,6 @@
                                 <a href="https://huggingface.co/collections/FatimahEmadEldin/sakinah-ai-at-mentalqa-689b2d707791cea458e97aaf" target="_blank" class="tab">Hugging Face</a>
                             </div>
                         </div>
-                        <!-- NEW PROJECT: MorphoArabia -->
                         <div class="project-card">
                             <div class="project-header">
                                 <div class="project-image"><img src="https://placehold.co/80x80/38bdf8/0B1120?text=Morpho" alt="MorphoArabia Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div>
@@ -421,7 +416,6 @@
                                 <a href="https://huggingface.co/collections/FatimahEmadEldin/barec-shared-task-2025-689195853f581b9a60f9bd6c" target="_blank" class="tab">Hugging Face</a>
                             </div>
                         </div>
-                        <!-- NEW PROJECT: Sentiment Analysis -->
                         <div class="project-card">
                             <div class="project-header">
                                 <div class="project-image"><img src="https://placehold.co/80x80/F56565/FFFFFF?text=LLaMA" alt="Sentiment Analysis Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div>
@@ -432,7 +426,6 @@
                                 <a href="https://sentimentanalyzer-llama.streamlit.app/" target="_blank" class="tab">Deployed App</a>
                             </div>
                         </div>
-                        <!-- NEW PROJECT: Wave2Vec ASR -->
                         <div class="project-card">
                             <div class="project-header">
                                 <div class="project-image"><img src="https://placehold.co/80x80/ED8936/FFFFFF?text=ASR" alt="Arabic ASR Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div>
@@ -443,7 +436,6 @@
                                 <a href="https://drive.google.com/drive/folders/152KouSQelqzIjH3xl5bRWVKYpjvjOIyD?usp=drive_link" target="_blank" class="tab">Project Files</a>
                             </div>
                         </div>
-                        <!-- Existing Projects -->
                         <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/0074D9/FFFFFF?text=CAT" alt="Bilingual CAT Tool Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.llm.bilingual.title">Bilingual CAT Tool (PDF to Word)</h3></div></div><p data-translate-key="datascience.llm.bilingual.desc">Provides a free, open-source alternative to commercial CAT tools. It extracts text from PDFs, segmenting it for easy bilingual translation and presenting it in an editable table format.</p><div class="project-buttons"><a href="https://bilingual-cat-tool.streamlit.app/" target="_blank" class="tab" data-translate-key="buttons.app">Deployed App</a><a href="https://github.com/astral-fate/bilingual-cat-tool" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a></div></div>
                         <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/FF4136/FFFFFF?text=Summ" alt="Summrize.ai Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.llm.summrize.title">Summrize.ai</h3></div></div><p data-translate-key="datascience.llm.summrize.desc">An AI-powered tool for summarizing complex legal documents, such as terms of service and privacy policies, into clear, concise, and easy-to-understand summaries.</p><div class="project-buttons"><a href="https://summrize-ai.streamlit.app/" target="_blank" class="tab" data-translate-key="buttons.app">Deployed App</a><a href="https://github.com/astral-fate/summrize-ai" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a></div></div>
                         <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/3D9970/FFFFFF?text=Guide" alt="Smart Guide Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.llm.smartguide.title">Smart Guide</h3></div></div><p data-translate-key="datascience.llm.smartguide.desc">A personalized Saudi Arabia tourism assistant using OpenAI's GPT-4. Provides detailed recommendations based on user preferences for location, budget, trip type, and more.</p><div class="project-buttons"><a href="https://smart-guide.streamlit.app/" target="_blank" class="tab" data-translate-key="buttons.app">Deployed App</a><a href="https://github.com/astral-fate/Smart-Guide" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a></div></div>
@@ -452,7 +444,7 @@
                 <div id="computer-vision" class="sub-tab-content">
                      <h2 data-translate-key="datascience.cv.title">Computer Vision</h2>
                     <div class="projects-container">
-                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/B10DC9/FFFFFF?text=ArSL" alt="ArSL Project Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.cv.arsl.title">Deep Learning for Arabic Sign Language</h3></div></div><p data-translate-key="datascience.cv.arsl.desc">This project utilizes the Arabic Sign Language (ArSL) dataset to train a deep learning model, creating a computer vision application that assists people to foster inclusive communication.</p><div class="project-buttons"><a href="https://github.com/astral-fate/ArSL" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a><a href="https://drive.google.com/drive/u/0/folders/1iIxu7yiE4ldKZDKv_tfpn6IsBU2fGAIr" target="_blank" class="tab" data-translate-key="buttons.experiment">The Experiment</a></div></div>
+                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/B10DC9/FFFFFF?text=ArSL" alt="ArSL Project Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.cv.arsl.title">Deep Learning for Arabic Sign Language</h3></div></div><p data-translate-key="datascience.cv.arsl.desc">This project utilizes the Arabic Sign Language (ArSL) dataset to train a deep learning model, creating a computer vision application that assists people to foster inclusive communication.</p<div class="project-buttons"><a href="https://github.com/astral-fate/ArSL" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a><a href="https://drive.google.com/drive/u/0/folders/1iIxu7yiE4ldKZDKv_tfpn6IsBU2fGAIr" target="_blank" class="tab" data-translate-key="buttons.experiment">The Experiment</a></div></div>
                         <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/FF851B/FFFFFF?text=PT" alt="MyPhysio Project Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.cv.myphysio.title">CV for Remote Physical Therapy</h3></div></div><p data-translate-key="datascience.cv.myphysio.desc">This project uses a dataset of PT exercises to train a deep learning model, creating a computer vision application that assists patients as they perform rehabilitation exercises.</p><div class="project-buttons"><a href="https://github.com/astral-fate/Myphysio" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a></div></div>
                     </div>
                 </div>
@@ -470,7 +462,6 @@
             <section id="development" class="tab-content">
                 <h1 data-translate-key="development.title">Full Stack Development Projects</h1>
                 <div class="projects-container">
-                     <!-- NEW PROJECT: Cairo Uni Platform -->
                      <div class="project-card">
                         <div class="project-header">
                             <div class="project-image"><img src="https://placehold.co/80x80/85144b/FFFFFF?text=CU" alt="Cairo University Platform Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div>
@@ -487,7 +478,6 @@
         </main>
     </section>
 
-    <!-- ... existing footer ... -->
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-column">
@@ -516,22 +506,12 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // --- TRANSLATION LOGIC ---
+            // --- TRANSLATION LOGIC (ENGLISH ONLY) ---
             const translations = {
-                en: { "hero.greeting": "Hello, I'm ", "hero.portfolio": "Portfolio", "hero.description": "A passionate professional with a diverse skill set. I specialize in leveraging data to build intelligent products and create meaningful user experiences.", "hero.cta": "Learn More", "portfolio.name": "Projects", "portfolio.tagline": "Product Management | Data Science | Development", "nav.about": "About Me", "nav.product": "Product", "nav.data_science": "Data Science", "nav.development": "Development", "about_section.title": "Crafting Digital Experiences", "about_section.stats.experience": "Years of Experience", "about_section.stats.projects": "Projects Completed", "product.title": "Digital Product Projects", "skills.title": "Core Skills", "buttons.development": "Development (GitHub)", "buttons.product_docs": "Product Docs", "buttons.linkedin": "Company LinkedIn", "buttons.app": "Deployed App", "buttons.experiment": "The Experiment", "buttons.dashboard": "Tableau Dashboard", "buttons.dataset": "Dataset", "buttons.download_cv": "Download CV", "product.penceai.title": "PenceAI", "product.penceai.desc": "AI-advisor to help achieve goals of sustainable financial management. The main goal of the PenceAI project is to develop an AI-powered personal finance advisor to help users manage their finances, provide budgeting advice, and suggest investments.", "product.nafas.title": "Nafas Mobile App: Product Enhancement", "product.nafas.desc": "Suggested Features for Nafas Mobile app, including gamification, a learning path, journaling and breath exercises.", "product.tabby.title": "Tabby UI Microcopy and Localization", "product.tabby.desc": "Use case of Saudi dialect localization of the UI Microcopy for the amazon git user-flow, along with the success and failure messages.", "datascience.title": "Data Science Projects", "datascience.nav.llm": "LLM", "datascience.nav.cv": "Computer Vision", "datascience.nav.ml": "Machine Learning", "datascience.nav.dataviz": "Data Visualization", "datascience.llm.title": "LLM Projects", "datascience.llm.bilingual.title": "Bilingual CAT Tool (PDF to Word)", "datascience.llm.bilingual.desc": "Provides a free, open-source alternative to commercial CAT tools. It extracts text from PDFs, segmenting it for easy bilingual translation and presenting it in an editable table format.", "datascience.llm.summrize.title": "Summrize.ai", "datascience.llm.summrize.desc": "An AI-powered tool for summarizing complex legal documents, such as terms of service and privacy policies, into clear, concise, and easy-to-understand summaries.", "datascience.llm.smartguide.title": "Smart Guide", "datascience.llm.smartguide.desc": "A personalized Saudi Arabia tourism assistant using OpenAI's GPT-4. Provides detailed recommendations based on user preferences for location, budget, trip type, and more.", "datascience.cv.title": "Computer Vision", "datascience.cv.arsl.title": "Deep Learning for Arabic Sign Language", "datascience.cv.arsl.desc": "This project utilizes the Arabic Sign Language (ArSL) dataset to train a deep learning model, creating a computer vision application that assists people to foster inclusive communication.", "datascience.cv.myphysio.title": "CV for Remote Physical Therapy", "datascience.cv.myphysio.desc": "This project uses a dataset of PT exercises to train a deep learning model, creating a computer vision application that assists patients as they perform rehabilitation exercises.", "datascience.ml.title": "Machine Learning", "datascience.ml.desc": "No projects currently listed in this category. Check back soon!", "datascience.dataviz.title": "Data Visualization", "datascience.dataviz.monshaat.title": "Monsha'at 2023 Report", "datascience.dataviz.monshaat.desc": "Analysis of Saudi Arabia's business establishments in Q1 2023, categorized by size and economic activity, sourced from Monsha'at's Open Data Platform.", "datascience.dataviz.usaretail.title": "USA Retail Superstores", "datascience.dataviz.usaretail.desc": "Analysis of a US retail superstore's data, creating a dashboard to track key metrics and provide insights to management. The dashboard gives an overview of performance and identifies areas for improvement.", "datascience.dataviz.tata.title": "TATA: Online Retail Analysis", "datascience.dataviz.tata.desc": "A consultant-led analysis of an online retail store's data to identify key revenue drivers and provide strategic recommendations to the CEO and CMO from marketing and operations perspectives.", "development.title": "Development Projects", "development.desc": "No projects currently listed in this category. Please check back later!", "footer.resources": "Resources", "footer.social": "Socials", "footer.rights": "All rights reserved." },
-                ar: { "hero.greeting": "أهلاً، أنا ", "hero.portfolio": "ملف الأعمال", "hero.description": "متخصصة شغوفة ذات مجموعة متنوعة من المهارات. أتخصص في الاستفادة من البيانات لبناء منتجات ذكية وخلق تجارب مستخدم ذات معنى.", "hero.cta": "اعرف المزيد", "portfolio.name": "المشاريع", "portfolio.tagline": "إدارة المنتجات | علم البيانات | التطوير", "nav.about": "عني", "nav.product": "المنتجات", "nav.data_science": "علم البيانات", "nav.development": "التطوير", "about_section.title": "صياغة التجارب الرقمية", "about_section.stats.experience": "سنوات من الخبرة", "about_section.stats.projects": "مشروع مكتمل", "product.title": "مشاريع المنتجات الرقمية", "skills.title": "المهارات الأساسية", "buttons.development": "التطوير (GitHub)", "buttons.product_docs": "مستندات المنتج", "buttons.linkedin": "الشركة (LinkedIn)", "buttons.app": "التطبيق المباشر", "buttons.experiment": "التجربة", "buttons.dashboard": "لوحة البيانات", "buttons.dataset": "مجموعة البيانات", "buttons.download_cv": "تحميل السيرة الذاتية", "product.penceai.title": "PenceAI", "product.penceai.desc": "مستشار ذكاء اصطناعي للمساعدة في تحقيق أهداف الإدارة المالية المستدامة. الهدف الرئيسي هو تطوير مستشار مالي شخصي لمساعدة المستخدمين على إدارة شؤونهم المالية وتقديم المشورة بشأن الميزانية واقتراح الاستثمارات.", "product.nafas.title": "تطبيق نفَس: تحسين المنتج", "product.nafas.desc": "ميزات مقترحة لتطبيق نفَس، بما في ذلك التلعيب، ومسار تعليمي، واليوميات، وتمارين التنفس.", "product.tabby.title": "تابي: تصميم النصوص وتوطينها", "product.tabby.desc": "حالة استخدام لتوطين النصوص باللهجة السعودية لواجهة مستخدم تدفق هدايا أمازون، مع رسائل النجاح والفشل.", "datascience.title": "مشاريع علم البيانات", "datascience.nav.llm": "نماذج اللغة الكبيرة", "datascience.nav.cv": "رؤية الحاسوب", "datascience.nav.ml": "تعلم الآلة", "datascience.nav.dataviz": "تصور البيانات", "datascience.llm.title": "مشاريع نماذج اللغة الكبيرة", "datascience.llm.bilingual.title": "أداة ترجمة بمساعدة الحاسوب ثنائية اللغة", "datascience.llm.bilingual.desc": "توفر بديلاً مجانياً ومفتوح المصدر لأدوات الترجمة التجارية. تستخرج النصوص من ملفات PDF وتقسمها لتسهيل الترجمة وتقدمها في جدول قابل للتحرير.", "datascience.llm.summrize.title": "Summrize.ai", "datascience.llm.summrize.desc": "أداة مدعومة بالذكاء الاصطناعي لتلخيص المستندات القانونية المعقدة، مثل شروط الخدمة وسياسات الخصوصية، إلى ملخصات واضحة وموجزة وسهلة الفهم.", "datascience.llm.smartguide.title": "المرشد الذكي", "datascience.llm.smartguide.desc": "مساعد سياحي شخصي في المملكة العربية السعودية باستخدام GPT-4 من OpenAI. يقدم توصيات مفصلة بناءً على تفضيلات المستخدم للموقع والميزانية ونوع الرحلة والمزيد.", "datascience.cv.title": "مشاريع رؤية الحاسوب", "datascience.cv.arsl.title": "تعلم عميق للغة الإشارة العربية", "datascience.cv.arsl.desc": "يستخدم هذا المشروع مجموعة بيانات لغة الإشارة العربية لتدريب نموذج تعلم عميق، لإنشاء تطبيق رؤية حاسوبية يساعد الأشخاص على تعزيز التواصل الشامل.", "datascience.cv.myphysio.title": "رؤية الحاسوب للعلاج الطبيعي عن بعد", "datascience.cv.myphysio.desc": "يستخدم هذا المشروع مجموعة بيانات من تمارين العلاج الطبيعي لتدريب نموذج تعلم عميق، لإنشاء تطبيق رؤية حاسوبية يساعد المرضى أثناء أداء تمارين إعادة التأهيل.", "datascience.ml.title": "مشاريع تعلم الآلة", "datascience.ml.desc": "لا توجد مشاريع مدرجة حاليًا في هذه الفئة. تحقق مرة أخرى قريبًا!", "datascience.dataviz.title": "مشاريع تصور البيانات", "datascience.dataviz.monshaat.title": "تقرير منشآت 2023", "datascience.dataviz.monshaat.desc": "تحليل لمنشآت الأعمال في المملكة العربية السعودية في الربع الأول من عام 2023، مصنفة حسب الحجم والنشاط الاقتصادي، مصدرها منصة البيانات المفتوحة لمنشآت.", "datascience.dataviz.usaretail.title": "المتاجر الكبرى في الولايات المتحدة", "datascience.dataviz.usaretail.desc": "تحليل بيانات متجر تجزئة كبير في الولايات المتحدة، وإنشاء لوحة معلومات لتتبع المقاييس الرئيسية وتقديم رؤى للإدارة. تقدم اللوحة نظرة عامة على الأداء وتحدد مجالات التحسين.", "datascience.dataviz.tata.title": "تحليل TATA للبيع بالتجزئة عبر الإنترنت", "datascience.dataviz.tata.desc": "تحليل بقيادة استشاري لبيانات متجر بيع بالتجزئة عبر الإنترنت لتحديد محركات الإيرادات الرئيسية وتقديم توصيات استراتيجية للمدير التنفيذي ومدير التسويق من منظور العمليات والتسويق.", "development.title": "مشاريع التطوير", "development.desc": "لا توجد مشاريع مدرجة حاليًا في هذه الفئة. يرجى التحقق مرة أخرى لاحقًا!", "footer.resources": "المصادر", "footer.social": "التواصل", "footer.rights": "جميع الحقوق محفوظة." }
+                en: { "hero.greeting": "Hello, I'm ", "hero.portfolio": "Portfolio", "hero.description": "A passionate professional with a diverse skill set. I specialize in leveraging data to build intelligent products and create meaningful user experiences.", "hero.cta": "Learn More", "portfolio.name": "Projects", "portfolio.tagline": "Product Management | Data Science | Development", "nav.about": "About Me", "nav.product": "Product", "nav.data_science": "Data Science", "nav.development": "Development", "about_section.title": "Crafting Digital Experiences", "about_section.stats.experience": "Years of Experience", "about_section.stats.projects": "Projects Completed", "product.title": "Digital Product Projects", "skills.title": "Core Skills", "buttons.development": "Development (GitHub)", "buttons.product_docs": "Product Docs", "buttons.linkedin": "Company LinkedIn", "buttons.app": "Deployed App", "buttons.experiment": "The Experiment", "buttons.dashboard": "Tableau Dashboard", "buttons.dataset": "Dataset", "buttons.download_cv": "Download CV", "product.penceai.title": "PenceAI", "product.penceai.desc": "AI-advisor to help achieve goals of sustainable financial management. The main goal of the PenceAI project is to develop an AI-powered personal finance advisor to help users manage their finances, provide budgeting advice, and suggest investments.", "product.nafas.title": "Nafas Mobile App: Product Enhancement", "product.nafas.desc": "Suggested Features for Nafas Mobile app, including gamification, a learning path, journaling and breath exercises.", "product.tabby.title": "Tabby UI Microcopy and Localization", "product.tabby.desc": "Use case of Saudi dialect localization of the UI Microcopy for the amazon git user-flow, along with the success and failure messages.", "datascience.title": "Data Science Projects", "datascience.nav.llm": "LLM", "datascience.nav.cv": "Computer Vision", "datascience.nav.ml": "Machine Learning", "datascience.nav.dataviz": "Data Visualization", "datascience.llm.title": "LLM Projects", "datascience.llm.bilingual.title": "Bilingual CAT Tool (PDF to Word)", "datascience.llm.bilingual.desc": "Provides a free, open-source alternative to commercial CAT tools. It extracts text from PDFs, segmenting it for easy bilingual translation and presenting it in an editable table format.", "datascience.llm.summrize.title": "Summrize.ai", "datascience.llm.summrize.desc": "An AI-powered tool for summarizing complex legal documents, such as terms of service and privacy policies, into clear, concise, and easy-to-understand summaries.", "datascience.llm.smartguide.title": "Smart Guide", "datascience.llm.smartguide.desc": "A personalized Saudi Arabia tourism assistant using OpenAI's GPT-4. Provides detailed recommendations based on user preferences for location, budget, trip type, and more.", "datascience.cv.title": "Computer Vision", "datascience.cv.arsl.title": "Deep Learning for Arabic Sign Language", "datascience.cv.arsl.desc": "This project utilizes the Arabic Sign Language (ArSL) dataset to train a deep learning model, creating a computer vision application that assists people to foster inclusive communication.", "datascience.cv.myphysio.title": "CV for Remote Physical Therapy", "datascience.cv.myphysio.desc": "This project uses a dataset of PT exercises to train a deep learning model, creating a computer vision application that assists patients as they perform rehabilitation exercises.", "datascience.ml.title": "Machine Learning", "datascience.ml.desc": "No projects currently listed in this category. Check back soon!", "datascience.dataviz.title": "Data Visualization", "datascience.dataviz.monshaat.title": "Monsha'at 2023 Report", "datascience.dataviz.monshaat.desc": "Analysis of Saudi Arabia's business establishments in Q1 2023, categorized by size and economic activity, sourced from Monsha'at's Open Data Platform.", "datascience.dataviz.usaretail.title": "USA Retail Superstores", "datascience.dataviz.usaretail.desc": "Analysis of a US retail superstore's data, creating a dashboard to track key metrics and provide insights to management. The dashboard gives an overview of performance and identifies areas for improvement.", "datascience.dataviz.tata.title": "TATA: Online Retail Analysis", "datascience.dataviz.tata.desc": "A consultant-led analysis of an online retail store's data to identify key revenue drivers and provide strategic recommendations to the CEO and CMO from marketing and operations perspectives.", "development.title": "Development Projects", "development.desc": "No projects currently listed in this category. Please check back later!", "footer.resources": "Resources", "footer.social": "Socials", "footer.rights": "All rights reserved." }
             };
             
-            const langToggle = document.getElementById('lang-toggle');
-            if (langToggle) {
-                langToggle.addEventListener('click', () => {
-                    currentLang = currentLang === 'en' ? 'ar' : 'en';
-                    localStorage.setItem('lang', currentLang);
-                    translatePage();
-                });
-            }
-
-            let currentLang = localStorage.getItem('lang') || 'en';
+            const currentLang = 'en';
 
             const translatePage = () => {
                 document.querySelectorAll('[data-translate-key]').forEach(el => {
@@ -545,7 +525,7 @@
                     }
                 });
                 document.body.setAttribute('data-lang', currentLang);
-                document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+                // The line that sets text direction (dir) has been removed to default to LTR.
             };
 
             // --- THEME TOGGLE LOGIC ---
