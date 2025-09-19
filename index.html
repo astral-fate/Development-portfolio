@@ -213,7 +213,7 @@
         .main-content a { color: var(--link-color); text-decoration: none; }
         .main-content a:hover { text-decoration: underline; }
         .projects-container { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 30px; margin-top: 2rem; }
-        .project-card { width: 100%; border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); background-color: var(--card-bg); display: flex; flex-direction: column; transition: all 0.3s; }
+        .project-card { width: 100%; border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); background-color: var(--card-bg); display: flex; flex-direction: column; transition: all 0.3s; margin-bottom: 30px; }
         .project-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); transform: translateY(-5px); }
         .project-header { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
         .project-image img { width: 80px; height: 80px; border-radius: 8px; object-fit: cover; background-color: #e0e0e0; }
@@ -444,11 +444,68 @@
                 <div id="computer-vision" class="sub-tab-content">
                      <h2 data-translate-key="datascience.cv.title">Computer Vision</h2>
                     <div class="projects-container">
-                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/B10DC9/FFFFFF?text=ArSL" alt="ArSL Project Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.cv.arsl.title">Deep Learning for Arabic Sign Language</h3></div></div><p data-translate-key="datascience.cv.arsl.desc">This project utilizes the Arabic Sign Language (ArSL) dataset to train a deep learning model, creating a computer vision application that assists people to foster inclusive communication.</p<div class="project-buttons"><a href="https://github.com/astral-fate/ArSL" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a><a href="https://drive.google.com/drive/u/0/folders/1iIxu7yiE4ldKZDKv_tfpn6IsBU2fGAIr" target="_blank" class="tab" data-translate-key="buttons.experiment">The Experiment</a></div></div>
-                        <div class="project-card"><div class="project-header"><div class="project-image"><img src="https://placehold.co/80x80/FF851B/FFFFFF?text=PT" alt="MyPhysio Project Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div><div class="project-info"><h3 class="project-title" data-translate-key="datascience.cv.myphysio.title">CV for Remote Physical Therapy</h3></div></div><p data-translate-key="datascience.cv.myphysio.desc">This project uses a dataset of PT exercises to train a deep learning model, creating a computer vision application that assists patients as they perform rehabilitation exercises.</p><div class="project-buttons"><a href="https://github.com/astral-fate/Myphysio" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a></div></div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-image"><img src="https://placehold.co/80x80/B10DC9/FFFFFF?text=ArSL" alt="ArSL Project Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div>
+                                <div class="project-info"><h3 class="project-title" data-translate-key="datascience.cv.arsl.title">Deep Learning for Arabic Sign Language</h3></div>
+                            </div>
+                            <p data-translate-key="datascience.cv.arsl.desc">This project utilizes the Arabic Sign Language (ArSL) dataset to train a deep learning model, creating a computer vision application that assists people to foster inclusive communication.</p>
+                            <div class="project-buttons">
+                                <a href="https://github.com/astral-fate/ArSL" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a>
+                                <a href="https://drive.google.com/drive/u/0/folders/1iIxu7yiE4ldKZDKv_tfpn6IsBU2fGAIr" target="_blank" class="tab" data-translate-key="buttons.experiment">The Experiment</a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-image"><img src="https://placehold.co/80x80/FF851B/FFFFFF?text=PT" alt="MyPhysio Project Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div>
+                                <div class="project-info"><h3 class="project-title" data-translate-key="datascience.cv.myphysio.title">CV for Remote Physical Therapy</h3></div>
+                            </div>
+                            <p data-translate-key="datascience.cv.myphysio.desc">This project uses a dataset of PT exercises to train a deep learning model, creating a computer vision application that assists patients as they perform rehabilitation exercises.</p>
+                            <div class="project-buttons">
+                                <a href="https://github.com/astral-fate/Myphysio" target="_blank" class="tab" data-translate-key="buttons.development">Development (GitHub)</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="machine-learning" class="sub-tab-content"><h2 data-translate-key="datascience.ml.title">Machine Learning</h2><div class="projects-container"><p data-translate-key="datascience.ml.desc">No projects currently listed in this category. Check back soon!</p></div></div>
+                <div id="machine-learning" class="sub-tab-content"><h2 data-translate-key="datascience.ml.title">Machine Learning</h2><div class="projects-container">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-image">
+                                <img src="https://placehold.co/80x80/F9D371/0B1120?text=GV" alt="Glycemic Variability Project Icon">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">BIG-IDEAs Lab Glycemic Variability and Wearable Device Data</h3>
+                            </div>
+                        </div>
+                        <p>
+                            Predicts glycemic variability using wearable device data and machine learning. The project provides a non-invasive way to monitor blood glucose levels, aiming to improve diabetes and pre-diabetes management. Feature engineering includes time-series analysis, lag features, and interaction features. The model achieves strong clinical metrics and is deployed for interactive use.
+                        </p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/astral-fate/BIG-IDEAs-Lab-Glycemic-Variability-and-Wearable-Device-Data" target="_blank" class="tab">GitHub Repo</a>
+                            <a href="https://huggingface.co/spaces/FatimahEmadEldin/BIG-IDEAs-Lab-Glycemic-Variability-and-Wearable-Device-Data" target="_blank" class="tab">Deployed Model</a>
+                            <a href="https://huggingface.co/collections/FatimahEmadEldin/big-ideas-lab-glycemic-variability-and-wearable-device-data-68ccde0eefe7b9ba76c127dc" target="_blank" class="tab">Hugging Face Collection</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-image">
+                                <img src="https://placehold.co/80x80/FFD700/0B1120?text=Palm" alt="Palm Farm Analytics Project Icon">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Palm Farm Analytics: Tamra-Thon Hackathon</h3>
+                            </div>
+                        </div>
+                        <p>
+                            Multi-model pipeline for the Tamra-Thon Hackathon, using satellite imagery and machine learning to address challenges in the date palm industry. Includes a "Farm Performance Score" (K-Means clustering), 7-day NDVI health forecasting (LightGBM), and anomaly detection (Isolation Forest). The solution enables farm ranking, proactive alerts, sustainability insights, and supply chain forecasting. Features advanced time-series engineering, weather integration, and interactive dashboards.
+                        </p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/astral-fate/palm-analyzer" target="_blank" class="tab">GitHub Repo</a>
+                            <a href="https://huggingface.co/spaces/FatimahEmadEldin/Farm-Performance-Score" target="_blank" class="tab">Deployed Model</a>
+                            <a href="https://palm-analyzer-klae2qigjlpmtcwgtbwned.streamlit.app/" target="_blank" class="tab">Streamlit Dashboard</a>
+                        </div>
+                    </div>
+                    <!-- ...existing ML placeholder or other projects... -->
+                </div></div>
                 <div id="data-visualization" class="sub-tab-content">
                     <h2 data-translate-key="datascience.dataviz.title">Data Visualization</h2>
                     <div class="projects-container">
@@ -461,16 +518,78 @@
             
             <section id="development" class="tab-content">
                 <h1 data-translate-key="development.title">Full Stack Development Projects</h1>
-                <div class="projects-container">
-                     <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-image"><img src="https://placehold.co/80x80/85144b/FFFFFF?text=CU" alt="Cairo University Platform Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div>
-                            <div class="project-info"><h3 class="project-title">Cairo University Portal</h3></div>
+                <div class="sub-btn-container">
+                    <a href="#" class="btn sub-btn active" data-sub-tab="frontend">Front End</a>
+                    <a href="#" class="btn sub-btn" data-sub-tab="fullstack">Full Stack Development</a>
+                </div>
+                <div id="frontend" class="sub-tab-content active-sub-content">
+                    <div class="projects-container">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-image">
+                                    <img src="https://placehold.co/80x80/4FD1C5/0B1120?text=EP" alt="Eastern Philosophers Project Icon">
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">Eastern Philosophers: Interactive Exploration</h3>
+                                </div>
+                            </div>
+                            <p>
+                                A web-based interactive application to explore the lives, works, and influences of prominent philosophers in the Islamic world. Features a timeline, categorized view, and dynamic influence map using D3.js. Responsive and visually engaging.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://astral-fate.github.io/Eastern-philosophers/" target="_blank" class="tab">Deployed Web</a>
+                                <a href="https://github.com/astral-fate/Eastern-philosophers" target="_blank" class="tab">GitHub Repo</a>
+                            </div>
                         </div>
-                        <p>A full-stack web application built with Flask to serve as a central hub for higher education institutions, streamlining academic and administrative processes for students and administrators.</p>
-                        <div class="project-buttons">
-                            <a href="https://cu-platform.com/" target="_blank" class="tab">Deployed App</a>
-                            <a href="https://github.com/astral-fate/cu-platform" target="_blank" class="tab">GitHub</a>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-image">
+                                    <img src="https://placehold.co/80x80/FFD700/0B1120?text=Crypto" alt="Cryptography Visualization Platform Icon">
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">Cryptography Visualization Platform</h3>
+                                </div>
+                            </div>
+                            <p>
+                                An interactive platform designed to make cryptography theories and algorithms intuitive through visualizations. Features smooth navigation, high HCI/UI/UX standards (Nielsen heuristics), and educational content for various cryptographic concepts. Built with HTML, CSS, Bootstrap, and JavaScript.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://astral-fate.github.io/Cryptography-visualizer/" target="_blank" class="tab">Deployed Web Application</a>
+                                <a href="https://github.com/astral-fate/Cryptography-visualizer" target="_blank" class="tab">GitHub Repo</a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-image">
+                                    <img src="https://placehold.co/80x80/FF69B4/0B1120?text=MC" alt="SheRyhs Menstrual Cycle Tracker Icon">
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">SheRyhs: Menstrual Cycle Tracking & Wellness</h3>
+                                </div>
+                            </div>
+                            <p>
+                                A comprehensive, user-friendly web application for menstrual cycle tracking, wellness insights, and personalized recommendations. Features include interactive cycle visualization, daily journaling, phase-based advice, hormonal horoscope, community forum, secure authentication, and an integrated workout app. Built with React, Vite, TypeScript, Tailwind CSS, and Supabase.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://sheryhs.vercel.app/" target="_blank" class="tab">Deployed Web Application</a>
+                                <a href="https://github.com/astral-fate/sheryhs/tree/main" target="_blank" class="tab">GitHub Repo</a>
+                            </div>
+                        </div>
+                        <!-- Add more front end projects here as needed -->
+                    </div>
+                </div>
+                <div id="fullstack" class="sub-tab-content">
+                    <div class="projects-container">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-image"><img src="https://placehold.co/80x80/85144b/FFFFFF?text=CU" alt="Cairo University Platform Icon" onerror="this.onerror=null;this.src='https://placehold.co/80x80/cccccc/ffffff?text=Img';"></div>
+                                <div class="project-info"><h3 class="project-title">Cairo University Portal</h3></div>
+                            </div>
+                            <p>A full-stack web application built with Flask to serve as a central hub for higher education institutions, streamlining academic and administrative processes for students and administrators.</p>
+                            <div class="project-buttons">
+                                <a href="https://cu-platform.com/" target="_blank" class="tab">Deployed App</a>
+                                <a href="https://github.com/astral-fate/cu-platform" target="_blank" class="tab">GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -588,6 +707,7 @@
             // --- ABOUT ME DETAILED TABS ---
             const aboutTabs = document.querySelectorAll('.about-info-tab');
             const aboutContents = document.querySelectorAll('.about-info-content');
+
             aboutTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
                     aboutTabs.forEach(t => t.classList.remove('active'));
